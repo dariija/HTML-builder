@@ -10,7 +10,7 @@ async function readFolderContent(folderPath) {
             let elemPath = path.join(folderPath, elem.name);
             let elemPathStats = path.parse(elemPath);
             let elemStats = await fsPromises.stat(elemPath);
-            console.log(`${elemPathStats.name} - ${elemPathStats.ext.slice(1)} - ${elemStats.size/1000}kb`)
+            console.log(`${elemPathStats.name} - ${elemPathStats.ext.slice(1)} - ${elemStats.size}b`)
         }
     }
 };
